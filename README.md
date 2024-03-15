@@ -44,11 +44,17 @@ Python (python-pkg)
 ![изображение](https://github.com/Murken-0/docker-vulnerabilities/assets/71382530/aba5138a-3154-4253-bdcc-3d00e82e8cdf)
 
 Запустим ее.
-Получим следующие предупреждения:
 
-![изображение](https://github.com/Murken-0/docker-vulnerabilities/assets/71382530/fdb90d71-5788-4639-b4df-cf14db250819)
+Получим счет:
+
+![изображение](https://github.com/Murken-0/docker-vulnerabilities/assets/71382530/8cc40d7c-8fd9-4463-8a4a-e1e6dc4acf35)
+
+В результате работы программы видим следующие предупреждения:
+
 
 1.1.1 - Ensure a separate partition for containers has been created (Automated) - Убедитесь, что создан отдельный раздел для контейнеров (автоматизирован)
+
+![изображение](https://github.com/Murken-0/docker-vulnerabilities/assets/71382530/fdb90d71-5788-4639-b4df-cf14db250819)
 
 Всегда рекомендуется использовать другой, кроме раздела docker по умолчанию. Большинство облачных платформ, таких как AWS или DigitalOcean, по умолчанию никогда не предоставляют максимальное свободное место под разделом /var.       Так что в этом случае вы можете столкнуться с нехваткой дискового пространства. 
 Как найти раздел по умолчанию для контейнеров Docker? -> docker info -f'{{.DockerRootDir }}'
@@ -59,9 +65,10 @@ Python (python-pkg)
 
 Аудит на linux-сервере может заключаться в настройке демона auditd. Этот демон отвечает за запись записи аудита в файл журнала аудита. Чтобы настроить аудит для файлов Docker, выполните:
 
-![image](https://github.com/egorvozhzhov/docker-test/assets/71019753/ba844651-decd-414e-888f-1aaeb08c16de)
 
 1.1.4 - Ensure auditing is configured for Docker files and directories -/run/containerd (Automated) - Убедитесь, что аудит настроен для файлов и каталогов Docker -/run/containerd (автоматический)
+
+![image](https://github.com/egorvozhzhov/docker-test/assets/71019753/ba844651-decd-414e-888f-1aaeb08c16de)
 
 ![изображение](https://github.com/Murken-0/docker-vulnerabilities/assets/71382530/7800a044-9da6-4688-a1ed-a9fb3ab7217a)
 
@@ -140,6 +147,22 @@ docker run --no-new-privileges my_image
 export DOCKER_CONTENT_TRUST=1
 docker trust key generate <ИМЯ>
 docker trust sign <ИМЯ_ОБРАЗА>:<ТЕГ>
+
+5.2 - Ensure that, if applicable, an AppArmor Profile is enabled (Automated) - Убедитесь, что, если применимо, профиль AppArmor включен (автоматически).
+
+5.3 - Ensure that, if applicable, SELinux security options are set (Automated) - Убедитесь, что, если применимо, установлены параметры безопасности SELinux (автоматически).
+
+5.8 - Ensure privileged ports are not mapped within containers (Automated) - Убедитесь, что привилегированные порты не отображаются внутри контейнеров (автоматически).
+
+5.9 - Ensure that only needed ports are open on the container (Manual) - Убедитесь, что в контейнере открыты только необходимые порты (вручную).
+
+5.11 - Ensure that the memory usage for containers is limited (Automated) - Убедитесь, что использование памяти для контейнеров ограничено (автоматизировано).
+
+5.12 - Ensure that CPU priority is set appropriately on containers (Automated) - Убедитесь, что приоритет ЦП установлен правильно в контейнерах (автоматически).
+
+5.13 - Ensure that the container's root filesystem is mounted as read only (Automated) - Убедитесь, что корневая файловая система контейнера смонтирована только для чтения (автоматически).
+
+5.14 - Ensure that incoming container traffic is bound to a specific host interface (Automated) - Убедитесь, что входящий контейнерный трафик привязан к определенному интерфейсу хоста (автоматически).
 
 # docker-scout
 Проверим уязвимости с помощью docker-scout. Для этого выберем образ и выполним анализ
