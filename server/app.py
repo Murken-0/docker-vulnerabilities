@@ -17,7 +17,16 @@ def get_student_data():
     cursor.execute('SELECT * FROM students LIMIT 1')
     student = cursor.fetchone()
 
-    html_page = f'<h1>{student[1]}</h1> <br> <h2>{student[2]}</h2>'
+    html_page = f"""
+    <html>
+    <head><title>Info</title></head>
+    <body>
+        <h1>Студент</h1>
+        <p>Имя: {student[1]}</p>
+        <p>Шифр: {student[2]}</p>
+    </body>
+    </html>
+    """
 
     return html_page
 
