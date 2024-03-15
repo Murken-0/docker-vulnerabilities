@@ -19,6 +19,7 @@
 ![изображение](https://github.com/Murken-0/docker-vulnerabilities/assets/71382530/58d6c87b-a8c9-4282-a4e1-2c5cc0b95458)
 
 Результат сканирования:
+
 server:latest (alpine 3.18.6)
   
 В библиотеке libexpat (свободная потокоориентированная библиотека парсинга XML) будет найдено две уязвимости:
