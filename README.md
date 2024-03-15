@@ -41,7 +41,6 @@ Python (python-pkg)
 
 В отдельную папку склонируем репозиторий утилиты bench-security
 
-![image](https://github.com/egorvozhzhov/docker-test/assets/71019753/682157ac-daa3-4ec0-a867-dd4e37762d75)
 ![изображение](https://github.com/Murken-0/docker-vulnerabilities/assets/71382530/aba5138a-3154-4253-bdcc-3d00e82e8cdf)
 
 Запустим ее.
