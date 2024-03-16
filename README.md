@@ -10,7 +10,7 @@
 
 ![изображение](https://github.com/Murken-0/docker-vulnerabilities/assets/71382530/2d07d648-0d35-474c-9c70-4fbc617e37c5)
    
-# Trivy
+# trivy
 
 Установим trivy.
 
