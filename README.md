@@ -3,10 +3,12 @@
 Настроим docker-compose файл, в котором в качестве сервисов будет: postgres и server. Настроим постоянное хранение, сетевое окружение и healthckecks. Для server настроим Dockerfile с необходимой версией питона (облегченной) и необходимыми библиотеками. В app.py находится логика приложения: при помощи Flask будет подниматься сервер, из postgres будем получать ФИО, формировать HTML страницу для возврата.
 
 Сделаем сборку server  
-   ![изображение](https://github.com/Murken-0/docker-vulnerabilities/assets/71382530/afd0e2d6-4036-46d3-a882-cfc2e132f39b)
+
+![изображение](https://github.com/Murken-0/docker-vulnerabilities/assets/71382530/afd0e2d6-4036-46d3-a882-cfc2e132f39b)
    
 С помощью команды docker-compose up -d развернем сервисы. В браузере по адресу localhost:8080 увидим результат
-   ![изображение](https://github.com/Murken-0/docker-vulnerabilities/assets/71382530/2d07d648-0d35-474c-9c70-4fbc617e37c5)
+
+![изображение](https://github.com/Murken-0/docker-vulnerabilities/assets/71382530/2d07d648-0d35-474c-9c70-4fbc617e37c5)
    
 # Trivy
 
